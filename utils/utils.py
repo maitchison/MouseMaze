@@ -10,7 +10,6 @@ def clip(x,low,high):
     if x > high: return high
     return x
 
-
 def smooth(X, alpha=0.95):
     Y = []
     y = X[0]
@@ -23,8 +22,10 @@ def smooth(X, alpha=0.95):
 def bits_to_int(bits):
     return int("".join([str(1 if i else 0) for i in bits]),2)
 
+
 def int_to_bits(x, fill):
     return [int(c) for c in bin(x)[2:].zfill(fill)]
+
 
 def softmax(x):
     """Compute softmax values for each sets of scores in x."""
